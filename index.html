@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=1pfXnAbudUeq&format=png&color=000000">
+  <link rel="stylesheet" href="styles.css">
+  <style></style>
+</head>
+<body>
+  <script>
+    // Obfuscated title string
+    const _ = t => atob(t);
+    document.title = _("SnVzdGluIERvd2xpbmc=");
+
+    // THEME INIT
+    const toggleTheme = () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    };
+    const storedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', storedTheme);
+
+    // HEADER WITH TYPING EFFECT
+    const header = document.createElement("header");
+
+    const title = document.createElement("div");
+    title.className = "typing";
+    title.textContent = "";
+    header.appendChild(title);
+
+    const nav = document.createElement("nav");
+    const links = [
+      { text: "About", href: "#about" },
+      { text: "Skills", href: "#skills" },
+      { text: "Projects", href: "#projects" },
+      { text: "Contact", href: "#contact" }
+    ];
+    links.forEach(link => {
+      const a = document.createElement("a");
+      a.href = link.href;
+      a.textContent = link.text;
+      nav.appendChild(a);
+    });
+
+    const themeBtn = document.createElement("button");
+    themeBtn.className = "switch";
+    themeBtn.textContent = "Toggle Theme";
+    themeBtn.onclick = toggleTheme;
+    nav.appendChild(themeBtn);
+
+    header.appendChild(nav);
+    document.body.appendChild(header);
+
+    // TYPING EFFECT
+    const obfuscatedText = "W21yam1kb3dsaW5nQGJveDp+XSQ=";
+    const typingText = atob(obfuscatedText);
+    let idx = 0;
+    function typeNextChar() {
+      if (idx <= typingText.length) {
+        title.textContent = typingText.slice(0, idx++);
+        setTimeout(typeNextChar, 100);
+      }
+    }
+    typeNextChar();
+
+    // ABOUT SECTION
+    const about = document.createElement("section");
+    about.className = "section";
+    about.id = "about";
+
+    const aboutTitle = document.createElement("h2");
+    aboutTitle.textContent = "About Me";
+
+    const aboutText = document.createElement("p");
+    aboutText.innerHTML = `
+      I am an aspiring network and cybersecurity specialist and hands-on practitioner, actively building a career in security analysis. 
+      <br>
+      I have a strong foundation in technical diagnostics, hardware troubleshooting, and proficiency with a wide range of industry-standard software tools.
+      My current focus is on penetration testing and the responsible discovery of vulnerabilities in web applications. 
+      <br>
+      I also develop custom tools, plugins, and automation scripts to enhance security workflows and implement quality-of-life improvements for both users and analysts.
+      <br>
+      Beyond cybersecurity, my personal interests include aviation, 3D animation and asset creation, as well as immersive world-building for VR game environments.
+         
+      `;
+
+    about.appendChild(aboutTitle);
+    about.appendChild(aboutText);
+    document.body.appendChild(about);
+
+    // SKILLS SECTION
+    const skills = document.createElement("section");
+    skills.className = "section";
+    skills.id = "skills";
+
+    const skillsTitle = document.createElement("h2");
+    skillsTitle.textContent = "Skill Set";
+
+    const skillsText = document.createElement("p");
+    skillsText.innerHTML = `
+      <table>
+        <tr>
+          <th>Tool / OS</th>
+          <th>Experience</th>
+          <th>Tool / OS</th>
+          <th>Experience</th>
+        </tr>
+
+        <tr>
+          <td>Burp Suite</td>
+          <td>Intermediate</td>
+          <td>ZAP</td>
+          <td>Intermediate</td>
+        </tr>
+
+        <tr>
+          <td>Nessus</td>
+          <td>Intermediate</td>
+          <td>OpenVAS</td>
+          <td>Fundemental</td>
+        </tr>
+ 
+        <tr>
+          <td>Metasploit</td>
+          <td>Intermediate</td>
+          <td>Wireshark</td>
+          <td>Intermediate</td>
+        </tr>
+
+        <tr>
+          <td>Aircrack-ng suite</td>
+          <td>Intermediate</td>
+          <td>Hydra</td>
+          <td>Intermediate</td>
+        </tr>
+
+        <tr>
+          <td>IDA</td>
+          <td>Fundemental</td>
+          <td>Ghidra</td>
+          <td>Fundemental</td>
+        </tr>
+
+        <tr>
+          <td>OllyDbg x64dbg x32dbg</td>
+          <td>Fundemental</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>Windows</td>
+          <td>Made for breaking</td>
+          <td>Linux</td>
+          <td>I use Arch</td>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>Ecosystem</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      `;
+
+    skills.appendChild(skillsTitle);
+    skills.appendChild(skillsText);
+    document.body.appendChild(skills);
+
+        // EDUCATION SECTION
+    const education = document.createElement("section");
+    education.className = "section";
+    education.id = "education";
+
+    const educationTitle = document.createElement("h2");
+    educationTitle.textContent = "Education / Certs";
+
+    const educationList = [
+      {        name: "Hack The Box / TryHackMe / Portswigger Academy", desc: "2022 - Present",     url:""       }, // <!-- Spending almost all my free time in one of these -->
+      {        name: "Linux+, CompTIA",                                desc: "In Progress",        url: ""      }, // <!-- Just need to take it. -->
+      {        name: "Network+, CompTIA",                              desc: "In Progress",        url: ""      }, // <!-- Just need to take it. -->
+      {        name: "Security+, CompTIA",                             desc: "In Progress",        url: ""      }, // <!-- 99% ready. Need more money. -->
+      {        name: "CISM, ISACA",                                    desc: "In Progress",        url: ""      }, // <!-- 99% ready. Need much more money. -->
+      {        name: "A+, CompTIA",                                    desc: "2011",               url: ""      },
+      {        name: "Associates of Applied Science, KVCC",            desc: "2009",               url: ""      },
+
+    ];
+
+    education.appendChild(educationTitle);
+    educationList.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "education";
+
+      const name = document.createElement("h3");
+      name.textContent = p.name + ", " + p.desc;
+
+      card.appendChild(name);
+      education.appendChild(card);
+    });
+    document.body.appendChild(education);
+
+    // PROJECTS SECTION
+    const projects = document.createElement("section");
+    projects.className = "section";
+    projects.id = "projects";
+
+    const projectsTitle = document.createElement("h2");
+    projectsTitle.textContent = "Projects / Contributions";
+
+    const projectLinks = {
+      LinkDiscombobulator: atob("aHR0cHM6Ly9naXRodWIuY29tL21yam1kb3dsaW5nL2Rpc2NvbWJvYnVsYXRvcg=="),
+      LinkYTPants: atob("aHR0cHM6Ly9naXRodWIuY29tL0lDYW5OZWl0aGVyQ29uZmlybU5vckRlbnkvWVQtUGFudHMK"),
+      LinkBonusClaimer: atob("aHR0cHM6Ly9naXRodWIuY29tL0lDYW5OZWl0aGVyQ29uZmlybU5vckRlbnkvQXV0b21hdGljLUF1dG8tVHdpdGNoLUJvbnVzLUF1dG8tQ2xhaW1lcgo="),
+
+    }
+
+    const projectList = [
+      {
+        name: "Unnamed Web Proxy Tool",
+        desc: "A full featured, homebrew web proxy tool written in Java, similar to Burp and ZAP - Still under development.",
+        urlKey: ""
+      },
+      {
+        name: "Discombobulator",
+        desc: "A closed source Java source code obfuscator written in Java. Still in production.",
+        urlKey: "LinkDiscombobulator"
+      },
+      {
+        name: "YT-Pants",
+        desc: "A browser plugin that redirects YouTube Shorts to the YouTube homepage.",
+        urlKey: "LinkYTPants"
+      },
+      {
+        name: "Automatic-Auto-Twitch-Bonus-Auto-Claimer",
+        desc: "A browser plugin that automatically clicks 'Claim Bonus' buttons on Twitch.tv automatically.",
+        urlKey: "LinkBonusClaimer"
+      }
+    ];
+
+    projects.appendChild(projectsTitle);
+    projectList.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "project";
+
+      const name = document.createElement("h3");
+      name.textContent = p.name;
+
+      const desc = document.createElement("p");
+      desc.textContent = p.desc + " ";
+
+      const link = document.createElement("a");
+      link.href = projectLinks[p.urlKey];
+      link.textContent = "\nView on GitHub";
+      link.style.whiteSpace = "pre";
+      link.target = "_blank";
+
+      desc.appendChild(link);
+      card.appendChild(name);
+      card.appendChild(desc);
+      projects.appendChild(card);
+    });
+    document.body.appendChild(projects);
+
+    // CONTACT SECTION
+    const contact = document.createElement("section");
+    contact.className = "section";
+    contact.id = "contact";
+
+    const contactTitle = document.createElement("h2");
+    contactTitle.textContent = "Contact Me";
+
+    const contactText = document.createElement("p");
+
+    // Base64-encoded strings
+    const emailLink = atob("bWFpbHRvOm1yam1kb3dsaW5nQGdtYWlsLmNvbQ==");
+    const emailImg = "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg";
+
+    const ircLink = atob("aXJjOi8vaXJjLmx5bnh5Lm5ldDo2NjY3");
+    const ircImg = "https://upload.wikimedia.org/wikipedia/en/e/e8/Mircnewlogo.png";
+
+    const linkedinLink = atob("aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2p1c3Rpbi1kb3dsaW5n");
+    const linkedinImg = "https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+
+    // Insert decoded content
+    contactText.innerHTML = `
+      <a href="${emailLink}"><img src="${emailImg}" width="48" height="48" /></a>
+      &nbsp;
+      <a href="${ircLink}"><img src="${ircImg}" width="48" height="48" /></a>
+      &nbsp
+      <a href="${linkedinLink}"><img src="${linkedinImg}" width="48" height="48" /></a>
+    `;
+
+    contact.appendChild(contactTitle);
+    contact.appendChild(contactText);
+    document.body.appendChild(contact);
+
+    // GITHUB ACTIVITY SECTION
+    const github = document.createElement("section");
+    github.className = "section";
+    github.id = "github";
+
+    const ghTitle = document.createElement("h2");
+    ghTitle.textContent = "Recent GitHub Activity";
+
+    const graphContainer = document.createElement("div");
+    graphContainer.className = "gh-graph";
+
+    const graphImage = document.createElement("img");
+    graphImage.alt = "GitHub contributions graph";
+    const githubUsernameA = atob("TXJKTURvd2xpbmc=");
+    graphImage.src = `https://ghchart.rshah.org/${githubUsernameA}`;
+
+    const note = document.createElement("p");
+
+    graphContainer.appendChild(note);
+    graphContainer.appendChild(graphImage);
+    github.appendChild(ghTitle);
+    github.appendChild(graphContainer);
+    document.body.appendChild(github);
+  </script>
+
+</body>
+</html>
