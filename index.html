@@ -111,45 +111,38 @@
         </tr>
 
         <tr>
-          <td>Burp Suite</td>
+          <td>Burp Suite / ZAP</td>
           <td>Intermediate</td>
-          <td>ZAP</td>
+          <td>Nessus</td>
           <td>Intermediate</td>
         </tr>
 
         <tr>
-          <td>Nessus</td>
-          <td>Intermediate</td>
           <td>OpenVAS</td>
           <td>Fundemental</td>
+          <td>Metasploit</td>
+          <td>Intermediate</td>
         </tr>
  
         <tr>
-          <td>Metasploit</td>
-          <td>Intermediate</td>
           <td>Wireshark</td>
           <td>Intermediate</td>
-        </tr>
-
-        <tr>
           <td>Aircrack-ng suite</td>
           <td>Intermediate</td>
+        </tr>
+
+        <tr>
           <td>Hydra</td>
           <td>Intermediate</td>
-        </tr>
-
-        <tr>
-          <td>IDA</td>
-          <td>Fundemental</td>
-          <td>Ghidra</td>
+          <td>IDA / Ghidra</td>
           <td>Fundemental</td>
         </tr>
 
         <tr>
-          <td>OllyDbg x64dbg x32dbg</td>
+          <td>OllyDbg </td>
           <td>Fundemental</td>
-          <td></td>
-          <td></td>
+          <td>x64dbg / x32dbg</td>
+          <td>Fundemental</td>
         </tr>
 
         <tr>
@@ -163,6 +156,13 @@
           <td>Ecosystem</td>
           <td></td>
           <td></td>
+        </tr>
+
+        <tr>
+          <td>Cessna 152</td>
+          <td></td>
+          <td>Logged Flight Hours</td>
+          <td>1.?</td>
         </tr>
       </table>
       `;
@@ -187,6 +187,8 @@
       {        name: "CISM, ISACA",                                    desc: "In Progress",        url: ""      }, // <!-- 99% ready. Need much more money. -->
       {        name: "A+, CompTIA",                                    desc: "2011",               url: ""      },
       {        name: "Associates of Applied Science, KVCC",            desc: "2009",               url: ""      },
+      {        name: "Medical Certificate Third Class",                desc: "2021",               url: ""      },     
+      {        name: "Gleim Private Pilot Ground School",              desc: "2022",               url: ""      }, // <!-- Completed GS. Need to take FAA test. -->
 
     ];
 
@@ -203,7 +205,6 @@
     });
     document.body.appendChild(education);
 
-    //TEST4
 
     // PROJECTS SECTION
     const projects = document.createElement("section");
@@ -214,6 +215,9 @@
     projectsTitle.textContent = "Projects / Contributions";
 
     const projectLinks = {
+      LinkUnnamedProxyTool: atob(""), // <!-- Not open source or publicly available -->
+      LinkFlightRoutePlanner: atob(""), // <!-- Not open source or publicly available -->
+      LinkAirFoilDesigner: atob(""), // <!-- Not open source or publicly available -->
       LinkDiscombobulator: atob("aHR0cHM6Ly9naXRodWIuY29tL21yam1kb3dsaW5nL2Rpc2NvbWJvYnVsYXRvcg=="),
       LinkYTPants: atob("aHR0cHM6Ly9naXRodWIuY29tL0lDYW5OZWl0aGVyQ29uZmlybU5vckRlbnkvWVQtUGFudHMK"),
       LinkBonusClaimer: atob("aHR0cHM6Ly9naXRodWIuY29tL0lDYW5OZWl0aGVyQ29uZmlybU5vckRlbnkvQXV0b21hdGljLUF1dG8tVHdpdGNoLUJvbnVzLUF1dG8tQ2xhaW1lcgo="),
@@ -223,17 +227,27 @@
     const projectList = [
       {
         name: "Unnamed Web Proxy Tool",
-        desc: "A full featured, homebrew web proxy tool written in Java, similar to Burp and ZAP - Still under development.",
+        desc: "A simple but powerful homebrew web proxy tool written in Java, designed to help examine web requests and responses. It can intercept, modify, and analyze web traffic in real-time, similar to tools like Burp Suite and ZAP, which allows for troubleshooting, security testing and debugging web apps. <br><br>It sports a clean, easy-to-use interface and a bunch of customizable features. When complete, it’ll be a handy tool for developers, security enthusiasts, and anyone who needs to get under the hood of web traffic. <br><br>Still in development.",
+        urlKey: ""
+      },
+      {
+        name: "Flight Route Planner",
+        desc: "A small personal project written in Java to create a flight route planner between an origin and destination. The user selects the aircraft type, fuel capacity, burn rate, and maximum range, then specifies the origin and destination airports. The program calculates several possible routes the aircraft can take, based on its available fuel and range between the two locations. <br><br>I plan to release it as an Apple and Android app in the future once it gets past the initial development stage.<br><br> Still In development.",
+        urlKey: ""
+      },
+      {
+        name: "Airfoil Designer",
+        desc: "A program written in Java that takes inputs such as chord length, camber, AoA, etc, and then plots the airfoil shape coodinates. The program also estimates the lift capabilities(if any), dependent upon variables such as airspeed, gross weight, wingspan, wing area(m^2), etc. <br><br>It is still in development phase and will eventually be sent to an actual engineer for critique to establish correct functionality.<br><br> Still In development.",
         urlKey: ""
       },
       {
         name: "Discombobulator",
-        desc: "A closed source Java source code obfuscator written in Java. Still in production.",
-        urlKey: "LinkDiscombobulator"
+        desc: "A closed-source Java obfuscator written in Java, designed to make your source code harder to reverse-engineer. It scrambles your code using several methods that make it difficult to understand, all while keeping the program’s functionality intact. Great for protecting your code and preventing tampering, but still easy to integrate into your development workflow. <br><br>Still in development.",
+        urlKey: ""
       },
       {
         name: "YT-Pants",
-        desc: "A browser plugin that redirects YouTube Shorts to the YouTube homepage.",
+        desc: "A browser plugin that when activated, saves you from getting trapped into wasted hours of scrolling by redirecting any YouTube Shorts to the YouTube homepage.",
         urlKey: "LinkYTPants"
       },
       {
@@ -252,15 +266,17 @@
       name.textContent = p.name;
 
       const desc = document.createElement("p");
-      desc.textContent = p.desc + " ";
+      desc.innerHTML = p.desc + "<br>";
+      
+      if (p.urlKey && projectLinks[p.urlKey]) {
+        const link = document.createElement("a");
+        link.href = projectLinks[p.urlKey];
+        link.textContent = "\nView on GitHub";
+        link.style.whiteSpace = "pre";
+        link.target = "_blank";
+        desc.appendChild(link);
+      }
 
-      const link = document.createElement("a");
-      link.href = projectLinks[p.urlKey];
-      link.textContent = "\nView on GitHub";
-      link.style.whiteSpace = "pre";
-      link.target = "_blank";
-
-      desc.appendChild(link);
       card.appendChild(name);
       card.appendChild(desc);
       projects.appendChild(card);
@@ -289,11 +305,13 @@
 
     // Insert decoded content
     contactText.innerHTML = `
+    <center>
       <a href="${emailLink}"><img src="${emailImg}" width="48" height="48" /></a>
       &nbsp;
       <a href="${ircLink}"><img src="${ircImg}" width="48" height="48" /></a>
       &nbsp
       <a href="${linkedinLink}"><img src="${linkedinImg}" width="48" height="48" /></a>
+    </center>
     `;
 
     contact.appendChild(contactTitle);
