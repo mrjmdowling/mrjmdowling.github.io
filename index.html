@@ -78,6 +78,7 @@
 
     const aboutText = document.createElement("p");
     aboutText.innerHTML = `
+      <center><h3>Open for Work</h3></center><br>
       I am an aspiring network and cybersecurity specialist and hands-on practitioner, actively building a career in security analysis. 
       <br>
       I have a strong foundation in technical diagnostics, hardware troubleshooting, and proficiency with a wide range of industry-standard software tools.
@@ -85,7 +86,7 @@
       <br>
       I also develop custom tools, plugins, and automation scripts to enhance security workflows and implement quality-of-life improvements for both users and analysts.
       <br>
-      Beyond cybersecurity, my personal interests include aviation, 3D animation and asset creation, as well as immersive world-building for VR game environments.
+      Beyond cybersecurity, my personal interests include aviation, 3D animation and model creation, as well as immersive world-building for VR game environments.
          
       `;
 
@@ -147,25 +148,50 @@
         </tr>
 
         <tr>
+          <td>Git</td>
+          <td>Fundemental</td>
+          <td>Blender</td>
+          <td>Intermediate</td>
+        </tr>
+
+        <tr>
           <td>Windows</td>
           <td>Made for breaking</td>
-          <td>Linux</td>
-          <td>I use Arch</td>
-        </tr>
-        <tr>
           <td>Apple</td>
           <td>Ecosystem</td>
+        </tr>
+        <tr>
+          <td>Linux</td>
+          <td>I use Arch</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Spacer -->
+        <tr> 
+          <td></td>
+          <td></td>
           <td></td>
           <td></td>
         </tr>
 
         <tr>
-          <td>Cessna 152</td>
-          <td></td>
-          <td>Logged Flight Hours</td>
-          <td>1.?</td>
+          <th>Category</th>
+          <th>Class</th>
+          <th>Type</th>
+          <th>Hours Logged</th>
+        </tr>
+
+        <tr>
+          <td>Airplane</td>
+          <td>Single-Engine Land</td>
+          <td>C152</td>
+          <td>1.?<sup>*</sup></td>
         </tr>
       </table>
+      <div>
+        * - Looking into total lifetime hours.
+      </div>
       `;
 
     skills.appendChild(skillsTitle);
@@ -214,7 +240,7 @@
 
     const projectsTitle = document.createElement("h2");
     projectsTitle.textContent = "Projects / Contributions";
-    
+
     const projectLinks = {
       LinkUnnamedProxyTool: atob(""), // <!-- Not open source or publicly available -->
       LinkFlightRoutePlanner: atob(""), // <!-- Not open source or publicly available -->
@@ -238,12 +264,12 @@
       },
       {
         name: "Airfoil Designer",
-        desc: "A program written in Java that takes inputs such as chord length, camber, AoA, etc, and then plots the airfoil shape coodinates. The program also estimates the lift capabilities(if any), dependent upon variables such as airspeed, gross weight, wingspan, wing area(m^2), etc. <br><br>It is still in development phase and will eventually be sent to an actual engineer for critique to establish correct functionality.<br><br> Still In development.",
+        desc: "A program written in Java that takes inputs such as chord length, camber, AoA, etc, and then plots the airfoil shape coodinates for XFoil. The program also estimates the lift capabilities(if any), dependent upon variables such as airspeed, gross weight, wingspan, wing area(m<sup>2</sup>), etc. <br><br>It is still in development phase and will eventually be sent to an actual engineer for critique to establish correct functionality.<br><br> Still In development.",
         urlKey: ""
       },
       {
         name: "Airflow Simulator Plugin for Blender",
-        desc: "A blender plugin that simulates a realistic airflow around airfoil. The simulation visualizes how air flows around an airfoil, including boundary layer effects, flow separation, and wake formation.<br>The key elements this plugin will aim to show that do not appear to be present in other plugins are certain flow deflections around airfoil surfaces, and 'void pocket' behavior with flow 'coming back together', something similar to how the <a href=\"https://en.wikipedia.org/wiki/Coandă_effect\">Coanda Effect</a> works.<br><br> Still In development.",
+        desc: "A blender plugin that simulates a realistic airflow around airfoil. The simulation visualizes how air flows around an airfoil, including boundary layer effects, flow separation, and wake formation.<br>The key elements this plugin will aim to show that do not appear to be present in other plugins are certain flow deflections around airfoil surfaces, and 'void pocket' behavior with flow 'coming back together', something similar to how the <a href=\"https://en.wikipedia.org/wiki/Coandă_effect\">Coandă Effect</a> works.<br><br> Still In development.",
         urlKey: ""
       },
       {
@@ -316,7 +342,7 @@
       &nbsp;
       <a href="${ircLink}"><img src="${ircImg}" width="48" height="48" /></a>
       &nbsp
-      <a href="${linkedinLink}"><img src="${linkedinImg}" width="48" height="48" /></a>
+      <!--<a href="${linkedinLink}"><img src="${linkedinImg}" width="48" height="48" /></a>-->
     </center>
     `;
 
@@ -330,7 +356,7 @@
     github.id = "github";
 
     const ghTitle = document.createElement("h2");
-    ghTitle.textContent = "Recent GitHub Activity";
+    ghTitle.textContent = "Recent Activity";
 
     const graphContainer = document.createElement("div");
     graphContainer.className = "gh-graph";
@@ -347,6 +373,42 @@
     github.appendChild(ghTitle);
     github.appendChild(graphContainer);
     document.body.appendChild(github);
+
+    
+    // TRYHACKME BADGE
+    const thm = document.createElement('div');
+    thm.className = 'thm';
+
+    const iframeWrapper = document.createElement('div');
+    iframeWrapper.className = 'iframe-wrapper';
+
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1404560';
+    iframe.frameBorder = '0';
+    iframe.style.width = '350px';
+    iframe.style.height = '100px';
+    iframe.style.border = 'none';
+    iframe.style.display = 'block';
+
+    // Inject CSS via JS
+    const style = document.createElement('style');
+    style.textContent = `
+      .thm {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+      }
+      .iframe-wrapper {
+        display: inline-block;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+    `;
+    document.head.appendChild(style);
+    iframeWrapper.appendChild(iframe);
+    thm.appendChild(iframeWrapper);
+    document.body.appendChild(thm);
+
   </script>
 
 </body>
