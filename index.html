@@ -1,425 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title></title>
-  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=1pfXnAbudUeq&format=png&color=000000">
-  <link rel="stylesheet" href="styles.css">
-  <style></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Cybersecurity Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #151b3d;
+            --text-primary: #00ff41;
+            --text-secondary: #8b9dc3;
+            --accent: #00ff41;
+            --accent-dim: #00aa2b;
+            --border: #1e2749;
+            --shadow: rgba(0, 255, 65, 0.1);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f5f7fa;
+            --bg-secondary: #ffffff;
+            --text-primary: #1a1a2e;
+            --text-secondary: #4a5568;
+            --accent: #0066cc;
+            --accent-dim: #0052a3;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 102, 204, 0.1);
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            color: var(--accent);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 6px var(--shadow);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px var(--shadow);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 2px solid var(--border);
+            position: relative;
+        }
+
+        .glitch {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0px var(--accent-dim);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .terminal-line {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .terminal-line::before {
+            content: '> ';
+            color: var(--accent);
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            color: var(--text-primary);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: '# ';
+            color: var(--accent);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .skill-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 0.3rem 0;
+            color: var(--text-secondary);
+        }
+
+        .skill-card li::before {
+            content: '→ ';
+            color: var(--accent);
+        }
+
+        .projects {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 16px var(--shadow);
+            transform: translateX(4px);
+        }
+
+        .project-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-primary);
+            color: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--accent);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .typing-cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .glitch {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .theme-toggle {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
-<body>
-  <script>
-    // Test
-    // Obfuscated title string
-    const _ = t => atob(t);
-    document.title = _("SnVzdGluIERvd2xpbmc=");
+<body data-theme="dark">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
 
-    // THEME INIT
-    const toggleTheme = () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const newTheme = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    };
-    const storedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', storedTheme);
+    <div class="container">
+        <header>
+            <h1 class="glitch">Justin Dowling</h1>
+            <p class="subtitle">Cybersecurity Professional</p>
+            <p class="tagline">Defending digital infrastructure · Breaking systems to build them stronger · Passion for security</p>
+        </header>
 
-    // HEADER WITH TYPING EFFECT
-    const header = document.createElement("header");
+        <section id="about">
+            <h2>About</h2>
+            <p class="terminal-line">user@box:~$ whoami<span class="typing-cursor">_</span></p>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                &nbsp&nbsp&nbspI am an aspiring network and cybersecurity specialist and hands-on practitioner, actively building a career in security analysis.<br>
+                &nbsp&nbsp&nbspI have a strong foundation in technical diagnostics, hardware troubleshooting, and proficiency with a wide range of industry-standard software tools. My current focus is on penetration testing and the responsible discovery of vulnerabilities in web applications.<br>
+                &nbsp&nbsp&nbspI also develop custom tools, plugins, and automation scripts to enhance security workflows and implement quality-of-life improvements for both users and analysts.<br>
+                &nbsp&nbsp&nbspBeyond cybersecurity, my personal interests include aviation, 3D animation and model creation, as well as immersive world-building for VR game environments. <br>
+                &nbsp&nbsp&nbspI believe in the hacker ethos: curiosity-driven, detail-oriented, and always learning.
+            </p>
+        </section>
 
-    const title = document.createElement("div");
-    title.className = "typing";
-    title.textContent = "";
-    header.appendChild(title);
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Security Testing</h3>
+                    <ul>
+                        <li>Penetration Testing</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>Security Audits</li>
+                        <li>Red Team Operations</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Frameworks</h3>
+                    <ul>
+                        <li>Metasploit / Burp Suite</li>
+                        <li>Nmap / Wireshark</li>
+                        <li>OWASP Top 10</li>
+                        <li>Kali Linux</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Python / Bash</li>
+                        <li>Secure Coding</li>
+                        <li>API Security</li>
+                        <li>Automation Scripts</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Infrastructure</h3>
+                    <ul>
+                        <li>Network Security</li>
+                        <li>Cloud Security</li>
+                        <li>SIEM Management</li>
+                        <li>IDS/IPS Configuration</li>
+                        
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>3D Modeling</h3>
+                    <ul>
+                        <li>Animation</li>
+                        <li>Asset Creation</li>
+                        <li>World Building</li>
+                        <li>Character Modeling</li>
+                        <li>Texture Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    const nav = document.createElement("nav");
-    // const links = [
-    //   { text: "About", href: "#about" },
-    //   { text: "Skills", href: "#skills" },
-    //   { text: "Projects", href: "#projects" },
-    //   { text: "Contact", href: "#contact" }
-    // ];
-    // links.forEach(link => {
-    //   const a = document.createElement("a");
-    //   a.href = link.href;
-    //   a.textContent = link.text;
-    //   nav.appendChild(a);
-    // });
+        <!-- Add Projects here when done -->
 
-    const themeBtn = document.createElement("button");
-    themeBtn.className = "switch";
-    themeBtn.textContent = "Toggle Theme";
-    themeBtn.onclick = toggleTheme;
-    nav.appendChild(themeBtn);
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+                → A+<br>
+                → Net+ (Ready to Take)<br>
+                → Sec+ (Ready to Take)<br>
+                → CISM (Ready to Take)<br>
+            </p>
+        </section>
 
-    header.appendChild(nav);
-    document.body.appendChild(header);
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-links">
+                <a href="https://github.com/MrJMDowling" class="contact-link" target="_blank">
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:MrJMDowling@gmail.com" class="contact-link">
+                    <span>Email</span>
+                </a>
+            </div>
+        </section>
 
-    // TYPING EFFECT
-    const obfuscatedText = "W21yam1kb3dsaW5nQGJveDp+XSQ=";
-    const typingText = atob(obfuscatedText);
-    let idx = 0;
-    function typeNextChar() {
-      if (idx <= typingText.length) {
-        title.textContent = typingText.slice(0, idx++);
-        setTimeout(typeNextChar, 100);
-      }
-    }
-    typeNextChar();
+        <footer>
+            <p>&copy; 2025 Justin Dowling. All rights reserved. | Built with security in mind.</p>
+        </footer>
+    </div>
 
-    // ABOUT SECTION
-    const about = document.createElement("section");
-    about.className = "section";
-    about.id = "about";
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
 
-    const aboutTitle = document.createElement("h2");
-    aboutTitle.textContent = "About Me";
-
-    const aboutText = document.createElement("p");
-    aboutText.innerHTML = `
-      <center><h3>Open for Work</h3></center><br>
-      I am an aspiring network and cybersecurity specialist and hands-on practitioner, actively building a career in security analysis. 
-      <br>
-      I have a strong foundation in technical diagnostics, hardware troubleshooting, and proficiency with a wide range of industry-standard software tools.
-      My current focus is on penetration testing and the responsible discovery of vulnerabilities in web applications. 
-      <br>
-      I also develop custom tools, plugins, and automation scripts to enhance security workflows and implement quality-of-life improvements for both users and analysts.
-      <br>
-      Beyond cybersecurity, my personal interests include aviation, 3D animation and model creation, as well as immersive world-building for VR game environments.
-         
-      `;
-
-    about.appendChild(aboutTitle);
-    about.appendChild(aboutText);
-    document.body.appendChild(about);
-
-    // SKILLS SECTION
-    const skills = document.createElement("section");
-    skills.className = "section";
-    skills.id = "skills";
-
-    const skillsTitle = document.createElement("h2");
-    skillsTitle.textContent = "Skill Set";
-
-    const skillsText = document.createElement("p");
-    skillsText.innerHTML = `
-      <table>
-        <tr>
-          <th>Tool / OS</th>
-          <th>Experience</th>
-          <th>Tool / OS</th>
-          <th>Experience</th>
-        </tr>
-
-        <tr>
-          <td>Burp Suite / ZAP</td>
-          <td>Intermediate</td>
-          <td>Nessus</td>
-          <td>Intermediate</td>
-        </tr>
-
-        <tr>
-          <td>OpenVAS</td>
-          <td>Fundemental</td>
-          <td>Metasploit</td>
-          <td>Intermediate</td>
-        </tr>
- 
-        <tr>
-          <td>Wireshark</td>
-          <td>Intermediate</td>
-          <td>Aircrack-ng suite</td>
-          <td>Intermediate</td>
-        </tr>
-
-        <tr>
-          <td>Hydra</td>
-          <td>Intermediate</td>
-          <td>IDA / Ghidra</td>
-          <td>Fundemental</td>
-        </tr>
-
-        <tr>
-          <td>OllyDbg </td>
-          <td>Fundemental</td>
-          <td>x64dbg / x32dbg</td>
-          <td>Fundemental</td>
-        </tr>
-
-        <tr>
-          <td>Git</td>
-          <td>Fundemental</td>
-          <td>Blender</td>
-          <td>Intermediate</td>
-        </tr>
-
-        <tr>
-          <td>Windows</td>
-          <td>Made for breaking</td>
-          <td>Apple</td>
-          <td>Ecosystem</td>
-        </tr>
-        <tr>
-          <td>Linux</td>
-          <td>I use Arch</td>
-          <td></td>
-          <td></td>
-        </tr>
-
-        <!-- Spacer -->
-        <tr> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <th>Category</th>
-          <th>Class</th>
-          <th>Type</th>
-          <th>Hours Logged</th>
-        </tr>
-
-        <tr>
-          <td>Airplane</td>
-          <td>Single-Engine Land</td>
-          <td>C152</td>
-          <td>1.?<sup>*</sup></td>
-        </tr>
-      </table>
-      <div>
-        * - Looking into total lifetime hours.
-      </div>
-      `;
-
-    skills.appendChild(skillsTitle);
-    skills.appendChild(skillsText);
-    document.body.appendChild(skills);
-
-        // EDUCATION SECTION
-    const education = document.createElement("section");
-    education.className = "section";
-    education.id = "education";
-
-    const educationTitle = document.createElement("h2");
-    educationTitle.textContent = "Education / Certs";
-
-    const educationList = [
-      {        name: "Hack The Box / TryHackMe / Portswigger Academy", desc: "2022 - Present",     url:""       }, // <!-- Spending almost all my free time in one of these -->
-      {        name: "Linux+, CompTIA",                                desc: "In Progress",        url: ""      }, // <!-- Just need to take it. -->
-      {        name: "Network+, CompTIA",                              desc: "In Progress",        url: ""      }, // <!-- Just need to take it. -->
-      {        name: "Security+, CompTIA",                             desc: "In Progress",        url: ""      }, // <!-- 99% ready. Need more money. -->
-      {        name: "CISM, ISACA",                                    desc: "In Progress",        url: ""      }, // <!-- 99% ready. Need much more money. -->
-      {        name: "A+, CompTIA",                                    desc: "2011",               url: ""      },
-      {        name: "Associates of Applied Science, KVCC",            desc: "2009",               url: ""      },
-      {        name: "Medical Certificate Third Class",                desc: "2021",               url: ""      },     
-      {        name: "Gleim Private Pilot Ground School",              desc: "2022",               url: ""      }, // <!-- Completed GS. Need to take FAA test. -->
-
-    ];
-
-    education.appendChild(educationTitle);
-    educationList.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "education";
-
-      const name = document.createElement("h3");
-      name.textContent = p.name + ", " + p.desc;
-
-      card.appendChild(name);
-      education.appendChild(card);
-    });
-    document.body.appendChild(education);
-
-
-    // PROJECTS SECTION
-    const projects = document.createElement("section");
-    projects.className = "section";
-    projects.id = "projects";
-
-    const projectsTitle = document.createElement("h2");
-    projectsTitle.textContent = "Projects / Contributions";
-
-    const projectLinks = {
-      LinkUnnamedProxyTool: atob(""), // <!-- Not open source or publicly available -->
-      LinkFlightRoutePlanner: atob(""), // <!-- Not open source or publicly available -->
-      LinkAirFoilDesigner: atob(""), // <!-- Not open source or publicly available -->
-      LinkDiscombobulator: atob(""),
-      LinkYTPants: atob(""),
-      LinkBonusClaimer: atob(""),
-
-    }
-
-    const projectList = [
-      {
-        name: "Unnamed Note Taking app",
-        desc: "A simple hierarchical note taking app written in java. Still in development.",
-        urlKey: ""
-      },
-      {
-        name: "File Hash Analyzer",
-        desc: "A drag and drop program written in java which displays several of the most commonthe hashes of the selected files. written in java. Still in development.",
-        urlKey: ""
-      },
-      {
-        name: "Unnamed Web Proxy Tool",
-        desc: "A simple but powerful homebrew web proxy tool written in Java, designed to help examine web requests and responses. It can intercept, modify, and analyze web traffic in real-time, similar to tools like Burp Suite and ZAP, which allows for troubleshooting, security testing and debugging web apps. <br><br>It sports a clean, easy-to-use interface and a bunch of customizable features. When complete, it’ll be a handy tool for developers, security enthusiasts, and anyone who needs to get under the hood of web traffic. <br><br>Still in development.",
-        urlKey: ""
-      },
-      {
-        name: "Flight Route Planner",
-        desc: "A small personal project written in Java to create a flight route planner between an origin and destination. The user selects the aircraft type, fuel capacity, burn rate, and maximum range, then specifies the origin and destination airports. The program calculates several possible routes the aircraft can take, based on its available fuel and range between the two locations. <br><br>I plan to release it as an Apple and Android app in the future once it gets past the initial development stage.<br><br> Still In development.",
-        urlKey: ""
-      },
-      {
-        name: "Airfoil Designer",
-        desc: "A program written in Java that takes inputs such as chord length, camber, AoA, etc, and then plots the airfoil shape coodinates for XFoil. The program also estimates the lift capabilities(if any), dependent upon variables such as airspeed, gross weight, wingspan, wing area(m<sup>2</sup>), etc. <br><br>It is still in development phase and will eventually be sent to an actual engineer for critique to establish correct functionality.<br><br> Still In development.",
-        urlKey: ""
-      },
-      {
-        name: "Airflow Simulator Plugin for Blender",
-        desc: "A blender plugin that simulates a realistic airflow around airfoil. The simulation visualizes how air flows around an airfoil, including boundary layer effects, flow separation, and wake formation.<br>The key elements this plugin will aim to show that do not appear to be present in other plugins are certain flow deflections around airfoil surfaces, and 'void pocket' behavior with flow 'coming back together', something similar to how the <a href=\"https://en.wikipedia.org/wiki/Coandă_effect\">Coandă Effect</a> works.<br><br> Still In development.",
-        urlKey: ""
-      },
-      {
-        name: "Discombobulator",
-        desc: "A closed-source Java obfuscator written in Java, designed to make your source code harder to reverse-engineer. It scrambles your code using several methods that make it difficult to understand, all while keeping the program’s functionality intact. Great for protecting your code and preventing tampering, but still easy to integrate into your development workflow. <br><br>Still in development.",
-        urlKey: ""
-      },
-      {
-        name: "YT-Pants",
-        desc: "A browser plugin that when activated, saves you from getting trapped into wasted hours of scrolling by redirecting any YouTube Shorts to the YouTube homepage.",
-        urlKey: ""
-      },
-      {
-        name: "Automatic-Auto-Twitch-Bonus-Auto-Claimer",
-        desc: "A browser plugin that automatically clicks 'Claim Bonus' buttons on Twitch.tv automatically.",
-        urlKey: ""
-      }
-    ];
-
-    projects.appendChild(projectsTitle);
-    projectList.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "project";
-
-      const name = document.createElement("h3");
-      name.textContent = p.name;
-
-      const desc = document.createElement("p");
-      desc.innerHTML = p.desc + "<br>";
-      
-      if (p.urlKey && projectLinks[p.urlKey]) {
-        const link = document.createElement("a");
-        link.href = projectLinks[p.urlKey];
-        link.textContent = "\nView on GitHub";
-        link.style.whiteSpace = "pre";
-        link.target = "_blank";
-        desc.appendChild(link);
-      }
-
-      card.appendChild(name);
-      card.appendChild(desc);
-      projects.appendChild(card);
-    });
-    document.body.appendChild(projects);
-
-    // CONTACT SECTION
-    const contact = document.createElement("section");
-    contact.className = "section";
-    contact.id = "contact";
-
-    const contactTitle = document.createElement("h2");
-    contactTitle.textContent = "Contact Me";
-
-    const contactText = document.createElement("p");
-
-    // Base64-encoded strings
-    const emailLink = atob("bWFpbHRvOm1yam1kb3dsaW5nQGdtYWlsLmNvbQ==");
-    const emailImg = "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg";
-
-    const ircLink = atob("aXJjOi8vaXJjLmx5bnh5Lm5ldDo2NjY3");
-    const ircImg = "https://upload.wikimedia.org/wikipedia/en/e/e8/Mircnewlogo.png";
-
-    const linkedinLink = atob("aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2p1c3Rpbi1kb3dsaW5n");
-    const linkedinImg = "https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
-
-    // Insert decoded content
-    contactText.innerHTML = `
-    <center>
-      <a href="${emailLink}"><img src="${emailImg}" width="48" height="48" /></a>
-      &nbsp;
-      <a href="${ircLink}"><img src="${ircImg}" width="48" height="48" /></a>
-      &nbsp
-      <!--<a href="${linkedinLink}"><img src="${linkedinImg}" width="48" height="48" /></a>-->
-    </center>
-    `;
-
-    contact.appendChild(contactTitle);
-    contact.appendChild(contactText);
-    document.body.appendChild(contact);
-
-    // GITHUB ACTIVITY SECTION
-    const github = document.createElement("section");
-    github.className = "section";
-    github.id = "github";
-
-    const ghTitle = document.createElement("h2");
-    ghTitle.textContent = "Recent Activity";
-
-    const graphContainer = document.createElement("div");
-    graphContainer.className = "gh-graph";
-
-    const graphImage = document.createElement("img");
-    graphImage.alt = "GitHub contributions graph";
-    const githubUsernameA = atob("TXJKTURvd2xpbmc=");
-    graphImage.src = `https://ghchart.rshah.org/${githubUsernameA}`;
-
-    const note = document.createElement("p");
-
-    graphContainer.appendChild(note);
-    graphContainer.appendChild(graphImage);
-    github.appendChild(ghTitle);
-    github.appendChild(graphContainer);
-    document.body.appendChild(github);
-
-    
-    // TRYHACKME BADGE
-    const thm = document.createElement('div');
-    thm.className = 'thm';
-
-    const iframeWrapper = document.createElement('div');
-    iframeWrapper.className = 'iframe-wrapper';
-
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1404560';
-    iframe.frameBorder = '0';
-    iframe.style.width = '350px';
-    iframe.style.height = '100px';
-    iframe.style.border = 'none';
-    iframe.style.display = 'block';
-
-    // Inject CSS via JS
-    const style = document.createElement('style');
-    style.textContent = `
-      .thm {
-        display: flex;
-        justify-content: center;
-        margin-top: 1em;
-      }
-      .iframe-wrapper {
-        display: inline-block;
-        border-radius: 4px;
-        overflow: hidden;
-      }
-    `;
-    document.head.appendChild(style);
-    iframeWrapper.appendChild(iframe);
-    thm.appendChild(iframeWrapper);
-    document.body.appendChild(thm);
-
-  </script>
-
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+    </script>
 </body>
 </html>
