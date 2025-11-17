@@ -3,401 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Dowling | Cybersecurity Professional</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-primary: #0a0e27;
-            --bg-secondary: #151b3d;
-            --text-primary: #00ff41;
-            --text-secondary: #8b9dc3;
-            --accent: #00ff41;
-            --accent-dim: #00aa2b;
-            --border: #1e2749;
-            --shadow: rgba(0, 255, 65, 0.1);
-        }
-
-        [data-theme="light"] {
-            --bg-primary: #f5f7fa;
-            --bg-secondary: #ffffff;
-            --text-primary: #1a1a2e;
-            --text-secondary: #4a5568;
-            --accent: #0066cc;
-            --accent-dim: #0052a3;
-            --border: #e2e8f0;
-            --shadow: rgba(0, 102, 204, 0.1);
-        }
-
-        body {
-            font-family: 'Courier New', monospace;
-            background: var(--bg-primary);
-            color: var(--text-secondary);
-            line-height: 1.6;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        .theme-toggle {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            background: var(--bg-secondary);
-            border: 2px solid var(--border);
-            color: var(--accent);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 4px 6px var(--shadow);
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 12px var(--shadow);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            padding: 4rem 0;
-            border-bottom: 2px solid var(--border);
-            position: relative;
-        }
-
-        .glitch {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 0px var(--accent-dim);
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .tagline {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .terminal-line {
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-
-        .terminal-line::before {
-            content: '> ';
-            color: var(--accent);
-        }
-
-        section {
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        h2 {
-            color: var(--text-primary);
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        h2::before {
-            content: '# ';
-            color: var(--accent);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-card {
-            background: var(--bg-secondary);
-            border: 2px solid var(--border);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 4px 12px var(--shadow);
-            transform: translateY(-2px);
-        }
-
-        .skill-card h3 {
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .skill-card ul {
-            list-style: none;
-        }
-
-        .skill-card li {
-            padding: 0.3rem 0;
-            color: var(--text-secondary);
-        }
-
-        .skill-card li::before {
-            content: '→ ';
-            color: var(--accent);
-        }
-
-        .projects {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--accent);
-            padding: 2rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 8px 16px var(--shadow);
-            transform: translateX(4px);
-        }
-
-        .project-card h3 {
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tech-tag {
-            background: var(--bg-primary);
-            color: var(--accent);
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            border: 1px solid var(--border);
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .contact-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 0.8rem 1.5rem;
-            border: 2px solid var(--accent);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-link:hover {
-            background: var(--accent);
-            color: var(--bg-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px var(--shadow);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .typing-cursor {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        @media (max-width: 768px) {
-            .glitch {
-                font-size: 2.5rem;
-            }
-
-            .subtitle {
-                font-size: 1.1rem;
-            }
-
-            .theme-toggle {
-                top: 1rem;
-                right: 1rem;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <meta name="description" content="Cybersecurity Professional - Penetration Testing, Network Defense, and Secure Systems Deployment">
+    <title>Justin Dowling | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body data-theme="dark">
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Justin Dowling</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
 
-    <div class="container">
-        <header>
-            <h1 class="glitch">Justin Dowling</h1>
-            <p class="subtitle">Cybersecurity Professional</p>
-            <p class="tagline">Defending digital infrastructure · Breaking systems to build them stronger · Passion for security</p>
-        </header>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Cybersecurity Professional</h1>
+            <p class="hero-subtitle">Penetration Testing | Network Defense | Secure Systems Architecture</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary">View Projects</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </header>
 
-        <section id="about">
-            <h2>About</h2>
-            <p class="terminal-line">user@box:~$ whoami<span class="typing-cursor">_</span></p>
-            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
-                &nbsp&nbsp&nbspI am an aspiring network and cybersecurity specialist and hands-on practitioner, actively building a career in security analysis.<br>
-                &nbsp&nbsp&nbspI have a strong foundation in technical diagnostics, hardware troubleshooting, and proficiency with a wide range of industry-standard software tools. My current focus is on penetration testing and the responsible discovery of vulnerabilities in web applications.<br>
-                &nbsp&nbsp&nbspBeyond cybersecurity, my personal interests include aviation, 3D animation and model creation, as well as immersive world-building for VR game environments. <br>
-                &nbsp&nbsp&nbspI believe in the hacker ethos: curiosity-driven, detail-oriented, and always learning.
-            </p>
-        </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <p class="lead">Hands-on cybersecurity practitioner specializing in penetration testing, network defense, and secure systems deployment. Experienced in building and managing virtualized environments for adversarial simulation, vulnerability assessment, and system hardening.</p>
+                <p>With proficiency across Linux, Windows, and cloud infrastructures, I bring practical expertise in DNS, email, and firewall configuration. Active learner through platforms like TryHackMe (Top 2% Global) and Hack The Box, continuously expanding knowledge in Python, Java, and C++. Currently pursuing Network+, Security+, and CISM certifications while multi-classing in Data Analysis.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="skills">
-            <h2>Skills & Expertise</h2>
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Co-founder / Systems Administrator / Content Developer</h3>
+                        <p class="timeline-org">Virtualize Everything</p>
+                        <p class="timeline-date">October 2020 – Present</p>
+                        <ul>
+                            <li>Built and maintained virtual lab environments for cybersecurity demonstrations, penetration testing, and adversarial emulation</li>
+                            <li>Deployed and secured cloud-based infrastructure including web, email, and DNS services</li>
+                            <li>Produced technical tutorials and cybersecurity education content reaching over 11,000 subscribers and 2 million total views</li>
+                            <li>Managed system security, patching, and segmentation within virtualized environments</li>
+                            <li>Administered Proxmox-based virtualization platform supporting continuous testing and tool development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Computer Technician</h3>
+                        <p class="timeline-org">Maine State Agency for Surplus Property</p>
+                        <p class="timeline-date">April 2009 – June 2010</p>
+                        <ul>
+                            <li>Diagnosed, repaired, and refurbished over 30,000 Apple laptops and desktops for redistribution</li>
+                            <li>Performed component-level maintenance, OS reinstallations, and hardware reconfigurations</li>
+                            <li>Provided direct user support and system troubleshooting to agency staff</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Penetration Testing Lab</h3>
+                    <p>Deployed VM environments replicating enterprise networks for exploit testing, payload development, and IDS/IPS evasion.</p>
+                    <div class="project-tags">
+                        <span class="tag">Metasploit</span>
+                        <span class="tag">Proxmox</span>
+                        <span class="tag">Network Security</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Secure DNS and Mail Server</h3>
+                    <p>Configured domain, SPF, DKIM, and DMARC for authenticated mail delivery with hardened configurations.</p>
+                    <div class="project-tags">
+                        <span class="tag">DNS</span>
+                        <span class="tag">Email Security</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Firewall and VPN Deployment</h3>
+                    <p>Implemented firewalls with PiHole, OpenVPN and WatchGuard for encrypted network access and an ad-free experience.</p>
+                    <div class="project-tags">
+                        <span class="tag">VPN</span>
+                        <span class="tag">PiHole</span>
+                        <span class="tag">WatchGuard</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Cloud-Based Service Hardening</h3>
+                    <p>Built and secured cloud instances for hosting web applications and backend services with active monitoring.</p>
+                    <div class="project-tags">
+                        <span class="tag">Cloud Security</span>
+                        <span class="tag">Monitoring</span>
+                        <span class="tag">Hardening</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Security Testing</h3>
+                <div class="skill-category">
+                    <h3>Security Operations</h3>
                     <ul>
                         <li>Penetration Testing</li>
                         <li>Vulnerability Assessment</li>
-                        <li>Security Audits</li>
-                        <li>Red Team Operations</li>
+                        <li>Incident Response</li>
+                        <li>System Hardening</li>
+                        <li>Network Hardening</li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <h3>Tools & Frameworks</h3>
+
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
                     <ul>
-                        <li>Metasploit / Burp Suite</li>
-                        <li>Nmap / Wireshark</li>
-                        <li>OWASP Top 10</li>
-                        <li>Kali Linux</li>
+                        <li>Metasploit, Burp Suite, Nmap</li>
+                        <li>Wireshark, Nessus, GVM</li>
+                        <li>Proxmox, VMware, Hyper-V</li>
+                        <li>PyCharm, Jupyter</li>
+                        <li>Cisco Packet Tracer</li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <h3>Development</h3>
+
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
                     <ul>
-                        <li>Python / Bash</li>
-                        <li>Secure Coding</li>
-                        <li>API Security</li>
-                        <li>Automation Scripts</li>
+                        <li>Linux Administration</li>
+                        <li>Network Administration</li>
+                        <li>Python & Bash Automation</li>
+                        <li>DNS & Email Configuration</li>
+                        <li>Firewall Management</li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <h3>Infrastructure</h3>
+
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
                     <ul>
-                        <li>Network Security</li>
-                        <li>Cloud Security</li>
-                        <li>SIEM Management</li>
-                        <li>IDS/IPS Configuration</li>
-                        
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>3D Modeling</h3>
-                    <ul>
-                        <li>Animation</li>
-                        <li>Asset Creation</li>
-                        <li>World Building</li>
-                        <li>Character Modeling</li>
-                        <li>Texture Design</li>
+                        <li>OWASP</li>
+                        <li>MITRE ATT&CK</li>
+                        <li>NIST 800-53</li>
+                        <li>PCI DSS</li>
+                        <li>GDPR</li>
                     </ul>
                 </div>
             </div>
-        </section>
 
-        <!-- Add Projects here when done -->
-
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <p style="color: var(--text-secondary); line-height: 1.8;">
-                → A+<br>
-                → Cisco Introduction to Cybersecurity (2025)<br>
-                → Cisco Ethical Hacker (2025)<br>
-                → Net+ (Ready to Take)<br>
-                → Sec+ (Ready to Take)<br>
-                → CISM (Ready to Take)<br>
-            </p>
-        </section>
-
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <div class="contact-links">
-                <a href="https://mrjmdowling.github.io/files/Resume2026.docx" class="contact-link" target="_blank">
-                    <span>Resume</span>
-                </a>
-                <a href="https://github.com/MrJMDowling" class="contact-link" target="_blank">
-                    <span>GitHub</span>
-                </a>
-                <a href="mailto:MrJMDowling@gmail.com" class="contact-link">
-                    <span>Email</span>
-                </a>
+            <div class="certifications">
+                <h3>Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-badge">CompTIA A+</div>
+                    <div class="cert-badge">Cisco Introduction to Data Science</div>
+                    <div class="cert-badge">Cisco Introduction to Cybersecurity</div>
+                    <div class="cert-badge">Cisco Ethical Hacker</div>
+                    <div class="cert-badge pursuing">Network+ (Pursuing)</div>
+                    <div class="cert-badge pursuing">Security+ (Pursuing)</div>
+                    <div class="cert-badge pursuing">CISM (Pursuing)</div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2025 Justin Dowling. All rights reserved. | Built with security in mind.</p>
-        </footer>
-    </div>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-text">Interested in discussing cybersecurity opportunities, collaboration, or consulting? I'm always open to connecting with fellow professionals.</p>
+                <div class="contact-methods">
+                    <a href="mailto:mrjmdowling@gmail.com" class="contact-btn">
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </span>
+                        <span>Email Me</span>
+                        <a href="./files/resume2026.txt" class="contact-btn">
+                            <span class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                </svg>
+                            </span>
+                            <span>Resume</span>
+                    </a>
+                    <a href="https://github.com/mrjmdowling" target="_blank" class="contact-btn">
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MrJMDowling — All rights reserved.</p>
+        </div>
+    </footer>
 
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            body.setAttribute('data-theme', newTheme);
-            themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
