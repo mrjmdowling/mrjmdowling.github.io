@@ -2,52 +2,96 @@ Justin Dowling
 Valrico, FL — MrJMDowling@gmail.com — mrjmdowling.github.io
 
 SUMMARY
-Hands-on cybersecurity practitioner specializing in penetration testing, network defense, and secure systems deployment. Experienced in building and managing virtualized environments for adversarial simulation, vulnerability assessment, and system hardening. Proficient across Linux, Windows, and cloud infrastructures with practical skills in DNS, email, and firewall configuration. Active in lab-based learning through TryHackMe and Hack The Box. Learning Python, Java and C++. Diligently studying for Network+, Security+, and CISM certifications. Multi-classing in Data Analysis.
+Hands-on cybersecurity practitioner specializing in penetration testing, network defense, and secure systems deployment. Experienced in building and managing virtualized environments for adversarial simulation, vulnerability assessment, and system hardening. Proficient across Linux, Windows, and cloud infrastructures with practical skills in DNS, email, and firewall configuration. Active in lab-based learning through TryHackMe and Hack The Box. Learning Python, Java and C++. Diligently studying for Network+, Security+, and CISM certifications. Multi-classing in Data Analysis. Pursuing private pilot license.
 
 CORE COMPETENCIES
 Penetration Testing, Vulnerability Assessment, Network Administration, Firewall Management, DNS & Email Configuration, Incident Response, Virtualization (Proxmox, VMware, Hyper-V), System Hardening, Network Hardening, Linux Administration, Python & Bash Automation, Exploratory Data Analysis
-Tools / IDEs: Metasploit, Burp Suite, Nmap, Wireshark, Nessus, GVM, ZAP, Hydra, Nikto, Empire, Cisco Packet Tracer, PyCharm, Jupyter Notebooks/Labs
+Tools / IDEs: Metasploit, Burp Suite, Nmap, Wireshark, Nessus, GVM, ZAP, Hydra, Nikto, Empire, Cisco Packet Tracer, PyCharm, VS Code, Jupyter Notebooks/Labs
 Operating Systems: Linux, Windows, macOS
-Scripting / Languages: Python, Bash, Java
+Scripting / Languages: Python, Bash, Java, Markdown
 Frameworks / Libraries: OWASP, MITRE ATT&CK, PTES, PCI DSS, NIST 800-53, GDPR, NumPy, Pandas, Matplotlib
 
 TECHNICAL EXPERIENCE
 Virtualize Everything | Oct 2020–Present
 Co-founder / Systems Administrator / Content Developer
-— Built and maintained virtual lab environments for cybersecurity demonstrations, penetration testing, and adversarial emulation.
-— Deployed and secured cloud-based infrastructure including web, email, and DNS services.
-— Produced technical tutorials and cybersecurity education content reaching over 11,000 subscribers and 2 million total views.
-— Managed system security, patching, and segmentation within virtualized environments.
-— Administered Proxmox-based virtualization platform supporting continuous testing and tool development.
+Built and maintained virtual lab environments for cybersecurity demonstrations, penetration testing, and adversarial emulation.
+Deployed and secured cloud-based infrastructure including web, email, and DNS services.
+Produced technical tutorials and cybersecurity education content reaching over 11,000 subscribers and 2 million total views.
+Managed system security, patching, and segmentation within virtualized environments.
+Administered Proxmox-based virtualization platform supporting continuous testing and tool development.
+
 Maine State Agency for Surplus Property | Apr 2009–Jun 2010
 Computer Technician
-— Diagnosed, repaired, and refurbished over 30,000 Apple laptops and desktops for redistribution to the general public.
-— Performed component-level maintenance, OS reinstallations, and hardware reconfigurations.
-— Provided direct user support and system troubleshooting to agency staff.
+Diagnosed, repaired, and refurbished over 30,000 Apple laptops and desktops for redistribution to the general public. Performed component-level maintenance, OS reinstallations, and hardware reconfigurations.
+Provided direct user support and system troubleshooting to agency staff.
 
 TECHNICAL PROJECTS
-— Penetration Testing Lab: Deployed VM environments replicating enterprise networks for exploit testing, payload development, and IDS/IPS evasion.
-— Secure DNS and Mail Server: Configured domain, SPF, DKIM, and DMARC for authenticated mail delivery with hardened configurations.
-— Firewall and VPN Deployment: Implemented firewalls with PiHole, OpenVPN and WatchGuard for encrypted network access and an ad-free experience.
-— Cloud-Based Service Hardening: Built and secured cloud instances for hosting web applications and backend services with active monitoring.
+Penetration Testing Lab: Deployed VM environments replicating enterprise networks for exploit testing, payload development, and IDS/IPS evasion.
+Secure DNS and Mail Server: Configured domain, SPF, DKIM, and DMARC for authenticated mail delivery with hardened configurations.
+Firewall and VPN Deployment: Implemented firewalls with PiHole, OpenVPN and WatchGuard for encrypted network access and an ad-free experience.
+Cloud-Based Service Hardening: Built and secured cloud instances for hosting web applications and backend services with active monitoring.
 
 EDUCATION
-— Associate of Applied Science — Kennebec Valley Community College (2009)
-— TryHackMe — Top 2% Global Ranking (2022 to Present)
-— Hack The Box — Active Participant (2022 to Present)
+Associate of Applied Science — Kennebec Valley Community College (2009)
+TryHackMe — Top 2% Global Ranking (2022 to Present)
+Hack The Box — Active Participant (2022 to Present)
 
 CERTIFICATIONS
-— CompTIA A+ (2011)
-— Cisco Introduction to Data Science (2025)
-— Cisco Introduction to Cybersecurity (2025)
-— Cisco Ethical Hacker (2025)
-— CompTIA Network+ (Pursuing)
-— CompTIA Security+ (Pursuing)
-— ISACA CISM (Pursuing)
+CompTIA A+ (2011)
+Cisco Introduction to Data Science (2025)
+Cisco Introduction to Cybersecurity (2025)
+Cisco Ethical Hacker (2025)
+TRUST Recreational UAS Certificate (2025)
+Part 107 UAS (Pursuing)
+CompTIA Network+ (Pursuing)
+CompTIA Security+ (Pursuing)
+ISACA CISM (Pursuing)
 
 ADDITIONAL EXPERIENCE
-Walmart — Electronics Sales Associate (2023–2024)
-Century Engineering — Traffic Technician 2 (2019–2022)
-Maine Capitol Police — Watchperson (2016–2019)
-Maine DOT — Transportation Worker 2 (2012–2016)
-Maine DOT — Transportation Aide (2010–2011)
+Walmart | Oct 2023–Aug 2023
+Electronics Sales Associate
+Provided customer service by greeting customers, assessing their needs, and recommending suitable electronic products and accessories, including phones, TVs, and game consoles.
+Processed sales transactions, returns, and exchanges using Point of Sale system while adhering to all company policies and loss prevention guidelines.
+Maintained a clean, organized, and safe sales floor and bins, which included stocking shelves, creating engaging product displays, and ensuring all merchandise was properly secured.
+Stayed informed on the latest technology offerings, sales promotions, and product specifications to answer customer inquiries and troubleshoot basic issues.
+Collaborated with team members to manage inventory control, and ensure overall sales floor operated smoothly.
+
+Century Engineering | Jul 2019–Aug 2022
+Traffic Technician 2
+Worked in a two person team traveling throughout the state to collect traffic data.
+Select locations and set tubes and counters in roadways.
+Monitored recorders to make sure they were counting properly.
+Performed individual manual counts.
+
+Maine Capitol Police | Aug 2016–Jul 2019
+Watchperson
+Conduct night patrols of all state buildings and grounds.
+Examine doors, windows and gates in order to determine security status
+Report irregularities to Building Control.
+Record information on potential breaches to inform Supervisor or other appropriate personnel.
+Investigate building alarms to report to Building Control.
+Duties usually performed individually.
+
+Maine DOT | Feb 2012–Aug 2016
+Transportation Worker 2
+Operate a motor vehicle for extended periods of time in all types of weather.
+Snow removal by means of a plow truck.
+Road repair. Paving, patching, culvert repair and replace.
+Perform routine and preventative maintenance to vehicles.
+Observe weather and road conditions to advise crew supervisor.
+Use of personal safety and protective equipment in accordance with rules and regulations.
+
+Maine DOT | Jun 2010–Nov 2011
+Transportation Aide
+Worked in a two person team traveling throughout the state to collect traffic data.
+Set tubes and counters in roadways.
+Monitored recorders to make sure they were counting properly.
+Performed individual manual counts.
+Transported vans to Central Fleet for maintenance purposes.
+
+Maine State Agency for Surplus Property | Apr 2009–Jun 2010
+Office Assistant 2
+Create spreadsheets and perform data management.
+Organize, record, and maintain computerized and/or manual files.
+Operate technical office materials/equipment.
+Query for data via telephone, computer, and/or written/oral communication.
