@@ -12,7 +12,7 @@ Scripting / Languages: Python, Bash, Java, Markdown
 Frameworks / Libraries: OWASP, MITRE ATT&CK, PTES, PCI DSS, NIST 800-53, GDPR, NumPy, Pandas, Matplotlib
 
 TECHNICAL EXPERIENCE
-Virtualize Everything | Oct 2020–Present
+Virtualize Everything | Oct 2020–June 2023
 Co-founder / Systems Administrator / Content Developer
 Built and maintained virtual lab environments for cybersecurity demonstrations, penetration testing, and adversarial emulation.
 Deployed and secured cloud-based infrastructure including web, email, and DNS services.
