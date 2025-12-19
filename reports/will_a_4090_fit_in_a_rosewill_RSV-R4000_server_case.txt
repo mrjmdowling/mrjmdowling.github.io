@@ -1,1 +1,3 @@
 Yes.
+But with a caveat: You need an RT-Series 12V-2×6 12VHPWR StealthSense 90 Degree PCIe Cable.
+https://usstore.cablemod.com/product/cablemod-basics-rt-series-12vhpwr-90-degree-pci-e-cable-for-asus-and-seasonic/?attribute_pa_16-pin-to-2-x-8-pin=16-pin-to-2-x-8-pin&attribute_pa_variant=variant-a
