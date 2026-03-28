@@ -5,19 +5,32 @@ Augusta, ME — MrJMDowling@gmail.com — mrjmdowling.github.io
 Hands-on cybersecurity practitioner specializing in penetration testing, network defense, and secure systems deployment. Experienced in building and managing virtualized environments for adversarial simulation, vulnerability assessment, and system hardening. Proficient across Linux, Windows, and cloud infrastructures with practical skills in DNS, email, and firewall configuration. Active in lab-based learning through TryHackMe and Hack The Box. Learning Python, Java and C++. Diligently studying for Network+, Security+, and CISM certifications. Multi-classing in Data Analysis. Pursuing private pilot license.
 
 ## CORE COMPETENCIES
-Penetration Testing and Exploitation: Metasploit, MSFvenom, Burp Suite, Nmap, Wireshark, Nessus, Hydra, SQLmap, John the Ripper, Aircrack-ng, Whois, Ping, Traceroute, Nslookup, Dig, Maltego, Shodan, Censys, Spiderfoot,
-Reverse Engineering and Binary Analysis: IDA Pro, Ghidra, WinDbg, Hex Workshop, Ollydbg, ILSpy, Cheat Engine
-Web Security: SQLi, XSS, CSRF, SSRF, API Security, Web Application Scanning
-Networking: OSI, TCP/IP, Sub/Supernetting, Routing, Switching, VLAN, Firewalls, VPN, DNS, DHCP, Network Hardening, IPS/IDS, Reverse Proxy
-Cloud and Virtualization: Proxmox, VirtualBox, VMware, ESXi, Docker, Kubernetes
-Security Tools: NetFlow Tracker, NetSim, Wazuh, Metasploitable, Centralops.net, DNSlytics.com, VirusTotal, AbuseIPDB
-Scripting and Automation: Python, Bash, PowerShell
-Frameworks and Standards: MITRE ATTACK, OWASP, PTES, NIST 800-53, PCI DSS, GDPR
-Operating Systems: Kali, Debian, Fedora, Arch, Tails, Whonix, Windows 7/10/11
-IDE’s: Vim, CLion, PyCharm, VS2022, Arduino IDE, CodeBlocks
-Creative Tools: Blender, Maya, Unity, Kdenlive, Premiere Pro, Photoshop, Substance Painter,
-Obscurities: Deepweb, Darkweb, Onion, Tor, HSDir, Proxychains, IRC, BBS, ICQ, NNTP, Bulletproof Hosting, I2P, Sinkholing, Fast Flux, Web/Email headers, DNS Records, Geo-Politics, OPSEC, OSINT, HUMINT, SOCMINT, PGP, Stegonography, Metadata Injection, Binary Patching, Dead-Dropping, uTorrent, Exif Analysis,
-Programming Languages: Python, HTML, JavaScript, C/C++ (Beginner)
+### Penetration Testing and Exploitation:
+Metasploit, MSFvenom, Burp Suite, Nmap, Wireshark, Nessus, Hydra, SQLmap, John the Ripper, Aircrack-ng, Whois, Ping, Traceroute, Nslookup, Dig, Maltego, Shodan, Censys, Spiderfoot,
+### Reverse Engineering and Binary Analysis:
+IDA Pro, Ghidra, WinDbg, Hex Workshop, Ollydbg, ILSpy, Cheat Engine
+### Web Security:
+SQLi, XSS, CSRF, SSRF, API Security, Web Application Scanning
+### Networking:
+OSI, TCP/IP, Sub/Supernetting, Routing, Switching, VLAN, Firewalls, VPN, DNS, DHCP, Network Hardening, IPS/IDS, Reverse Proxy
+### Cloud and Virtualization:
+Proxmox, VirtualBox, VMware, ESXi, Docker, Kubernetes
+### Security Tools:
+NetFlow Tracker, NetSim, Wazuh, Metasploitable, Centralops.net, DNSlytics.com, VirusTotal, AbuseIPDB
+### Scripting and Automation:
+Python, Bash, PowerShell
+### Frameworks and Standards:
+MITRE ATTACK, OWASP, PTES, NIST 800-53, PCI DSS, GDPR
+### Operating Systems:
+Kali, Debian, Fedora, Arch, Tails, Whonix, Windows 7/10/11
+### IDE’s:
+Vim, CLion, PyCharm, VS2022, Arduino IDE, CodeBlocks
+### Creative Tools:
+Blender, Maya, Unity, Kdenlive, Premiere Pro, Photoshop, Substance Painter,
+### Obscurities:
+Deepweb, Darkweb, Onion, Tor, HSDir, Proxychains, IRC, BBS, ICQ, NNTP, Bulletproof Hosting, I2P, Sinkholing, Fast Flux, Web/Email headers, DNS Records, Geo-Politics, OPSEC, OSINT, HUMINT, SOCMINT, PGP, Stegonography, Metadata Injection, Binary Patching, Dead-Dropping, uTorrent, Exif Analysis,
+### Programming Languages:
+Python, HTML, JavaScript, C/C++ (Beginner)
 
 ## TECHNICAL PROJECTS
 + Penetration Testing Lab: Deployed VM environments replicating enterprise networks for exploit testing, payload development, and IDS/IPS evasion.
