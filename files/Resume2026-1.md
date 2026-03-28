@@ -1,5 +1,5 @@
 # Justin Dowling
-Valrico, FL — MrJMDowling@gmail.com — mrjmdowling.github.io
+Augusta, ME — MrJMDowling@gmail.com — mrjmdowling.github.io
 
 ## SUMMARY
 Hands-on cybersecurity practitioner specializing in penetration testing, network defense, and secure systems deployment. Experienced in building and managing virtualized environments for adversarial simulation, vulnerability assessment, and system hardening. Proficient across Linux, Windows, and cloud infrastructures with practical skills in DNS, email, and firewall configuration. Active in lab-based learning through TryHackMe and Hack The Box. Learning Python, Java and C++. Diligently studying for Network+, Security+, and CISM certifications. Multi-classing in Data Analysis. Pursuing private pilot license.
