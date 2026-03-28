@@ -5,20 +5,19 @@ Augusta, ME — MrJMDowling@gmail.com — mrjmdowling.github.io
 Hands-on cybersecurity practitioner specializing in penetration testing, network defense, and secure systems deployment. Experienced in building and managing virtualized environments for adversarial simulation, vulnerability assessment, and system hardening. Proficient across Linux, Windows, and cloud infrastructures with practical skills in DNS, email, and firewall configuration. Active in lab-based learning through TryHackMe and Hack The Box. Learning Python, Java and C++. Diligently studying for Network+, Security+, and CISM certifications. Multi-classing in Data Analysis. Pursuing private pilot license.
 
 ## CORE COMPETENCIES
-Penetration Testing, Vulnerability Assessment, Network Administration, Firewall Management, DNS & Email Configuration, Incident Response, Virtualization (Proxmox, VMware, Hyper-V), System Hardening, Network Hardening, Linux Administration, Python & Bash Automation, Exploratory Data Analysis
-Tools / IDEs: Metasploit, Burp Suite, Nmap, Wireshark, Nessus, GVM, ZAP, Hydra, Nikto, Empire, Cisco Packet Tracer, PyCharm, VS Code, Jupyter Notebooks/Labs
-Operating Systems: Linux, Windows, macOS
-Scripting / Languages: Python, Bash, Java, Markdown
-Frameworks / Libraries: OWASP, MITRE ATT&CK, PTES, PCI DSS, NIST 800-53, GDPR, NumPy, Pandas, Matplotlib
-
-## TECHNICAL EXPERIENCE
-** Virtualize Everything | Oct 2020–Present
-* Co-founder / Systems Administrator / Content Developer
-+ Built and maintained virtual lab environments for cybersecurity demonstrations, penetration testing, and adversarial emulation.
-+ Deployed and secured cloud-based infrastructure including web, email, and DNS services.
-+ Produced technical tutorials and cybersecurity education content reaching over 11,000 subscribers and 2 million total views.
-+ Managed system security, patching, and segmentation within virtualized environments.
-+ Administered Proxmox-based virtualization platform supporting continuous testing and tool development.
+Penetration Testing and Exploitation: Metasploit, MSFvenom, Burp Suite, Nmap, Wireshark, Nessus, Hydra, SQLmap, John the Ripper, Aircrack-ng, Whois, Ping, Traceroute, Nslookup, Dig, Maltego, Shodan, Censys, Spiderfoot,
+Reverse Engineering and Binary Analysis: IDA Pro, Ghidra, WinDbg, Hex Workshop, Ollydbg, ILSpy, Cheat Engine
+Web Security: SQLi, XSS, CSRF, SSRF, API Security, Web Application Scanning
+Networking: OSI, TCP/IP, Sub/Supernetting, Routing, Switching, VLAN, Firewalls, VPN, DNS, DHCP, Network Hardening, IPS/IDS, Reverse Proxy
+Cloud and Virtualization: Proxmox, VirtualBox, VMware, ESXi, Docker, Kubernetes
+Security Tools: NetFlow Tracker, NetSim, Wazuh, Metasploitable, Centralops.net, DNSlytics.com, VirusTotal, AbuseIPDB
+Scripting and Automation: Python, Bash, PowerShell
+Frameworks and Standards: MITRE ATTACK, OWASP, PTES, NIST 800-53, PCI DSS, GDPR
+Operating Systems: Kali, Debian, Fedora, Arch, Tails, Whonix, Windows 7/10/11
+IDE’s: Vim, CLion, PyCharm, VS2022, Arduino IDE, CodeBlocks
+Creative Tools: Blender, Maya, Unity, Kdenlive, Premiere Pro, Photoshop, Substance Painter,
+Obscurities: Deepweb, Darkweb, Onion, Tor, HSDir, Proxychains, IRC, BBS, ICQ, NNTP, Bulletproof Hosting, I2P, Sinkholing, Fast Flux, Web/Email headers, DNS Records, Geo-Politics, OPSEC, OSINT, HUMINT, SOCMINT, PGP, Stegonography, Metadata Injection, Binary Patching, Dead-Dropping, uTorrent, Exif Analysis,
+Programming Languages: Python, HTML, JavaScript, C/C++ (Beginner)
 
 ## TECHNICAL PROJECTS
 + Penetration Testing Lab: Deployed VM environments replicating enterprise networks for exploit testing, payload development, and IDS/IPS evasion.
@@ -27,6 +26,7 @@ Frameworks / Libraries: OWASP, MITRE ATT&CK, PTES, PCI DSS, NIST 800-53, GDPR, N
 + Cloud-Based Service Hardening: Built and secured cloud instances for hosting web applications and backend services with active monitoring.
 
 ## EDUCATION
++ Diploma – Cony High school (2006)
 + Associate of Applied Science — Kennebec Valley Community College (2009)
 + TryHackMe — Top 2% Global Ranking (2022 to Present)
 + Hack The Box — Active Participant (2022 to Present)
@@ -38,13 +38,21 @@ Frameworks / Libraries: OWASP, MITRE ATT&CK, PTES, PCI DSS, NIST 800-53, GDPR, N
 + Cisco Ethical Hacker (2025)
 + TRUST Recreational UAS Certificate (2025)
 + Third-Class Medical Certificate (Exp. 8/31/2026)
-+ Part 61 Private Pilot License (Pursuing)
++ Part 61 Private Pilot License
 + Part 107 UAS (Pursuing)
 + CompTIA Network+ (Pursuing)
 + CompTIA Security+ (Pursuing)
 + ISACA CISM (Pursuing)
 
-## ADDITIONAL EXPERIENCE
+## PROFESSIONAL EXPERIENCE
+** Virtualize Everything | Oct 2020–Present
+* Co-founder / Systems Administrator / Content Developer
++ Built and maintained virtual lab environments for cybersecurity demonstrations, penetration testing, and adversarial emulation.
++ Deployed and secured cloud-based infrastructure including web, email, and DNS services.
++ Produced technical tutorials and cybersecurity education content reaching over 11,000 subscribers and 2 million total views.
++ Managed system security, patching, and segmentation within virtualized environments.
++ Administered Proxmox-based virtualization platform supporting continuous testing and tool development.
+
 ** Walmart | Oct 15 2023–Aug 18, 2024
 * Electronics Sales Associate
 + Provided customer service by greeting customers, assessing their needs, and recommending suitable electronic products and accessories, including phones, TVs, and game consoles.
@@ -104,12 +112,12 @@ Frameworks / Libraries: OWASP, MITRE ATT&CK, PTES, PCI DSS, NIST 800-53, GDPR, N
 + Repaired electrical equipment: power supplies, televisions and radios.
 + Performed computer repairs.
 + Cleaned labs and classrooms.
-+ Assisted students with lab work.
++ Assisted professor and students with lab work.
 
 ** Performance Food Group, North Center | June 2008—September 2008
 * Box Truck Driver
-+ Cleaned and maintained box truck.
++ Cleaned and maintained refridgerated box truck.
 + Refueled vehicle and checked fluid levels before and after deliveries.
-+ Followed oral and written instrucrions to delivery sites.
++ Followed oral and written instructions to delivery sites.
 + Loaded and unloaded packages for deliveries.
 
