@@ -37,6 +37,7 @@ Frameworks / Libraries: OWASP, MITRE ATT&CK, PTES, PCI DSS, NIST 800-53, GDPR, N
 + Cisco Introduction to Cybersecurity (2025)
 + Cisco Ethical Hacker (2025)
 + TRUST Recreational UAS Certificate (2025)
++ Third-Class Medical Certificate (Exp. 8/31/2026)
 + Part 61 Private Pilot License (Pursuing)
 + Part 107 UAS (Pursuing)
 + CompTIA Network+ (Pursuing)
