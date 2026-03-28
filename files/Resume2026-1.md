@@ -1,12 +1,12 @@
 # Justin Dowling
-Augusta, ME — MrJMDowling@gmail.com — mrjmdowling.github.io
+Augusta, ME — MrJMDowling@gmail.com — mrjmdowling.github.io — linkedin.com/in/justin-dowling
 
 ## SUMMARY
 Hands-on cybersecurity practitioner specializing in penetration testing, network defense, and secure systems deployment. Experienced in building and managing virtualized environments for adversarial simulation, vulnerability assessment, and system hardening. Proficient across Linux, Windows, and cloud infrastructures with practical skills in DNS, email, and firewall configuration. Active in lab-based learning through TryHackMe and Hack The Box. Learning Python, Java and C++. Diligently studying for Network+, Security+, and CISM certifications. Multi-classing in Data Analysis. Pursuing private pilot license.
 
 ## CORE COMPETENCIES
 ### Penetration Testing and Exploitation:
-Metasploit, MSFvenom, Burp Suite, Nmap, Wireshark, Nessus, Hydra, SQLmap, John the Ripper, Aircrack-ng, Whois, Ping, Traceroute, Nslookup, Dig, Maltego, Shodan, Censys, Spiderfoot,
+Metasploit, MSFvenom, Burp Suite, Nmap, Wireshark, Nessus, Hydra, SQLmap, John the Ripper, Aircrack-ng, Whois, Ping, Traceroute, Nslookup, Dig, Maltego, Shodan, Censys, Spiderfoot, ffuf,
 ### Reverse Engineering and Binary Analysis:
 IDA Pro, Ghidra, WinDbg, Hex Workshop, Ollydbg, ILSpy, Cheat Engine
 ### Web Security:
